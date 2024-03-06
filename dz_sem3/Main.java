@@ -10,8 +10,16 @@
 // Реализуйте интерфейс Comparable<Employee> для сравнения сотрудников по их возрасту.
 // Создайте компаратор EmployeeSalaryComparator, который будет сравнивать сотрудников по их зарплате.
 // Напишите тестовый класс для проверки сортировки массива сотрудников с использованием как Comparable, так и Comparator.
+
+// в классе Main Создам компаратор EmployeeSalaryComparator, который будет сравнивать сотрудников по их зарплате.
+
 package dz_sem3;
 
-public  {
-    
+import java.util.Comparator;
+
+public class Main implements Comparator<Employee> {
+    @Override
+    public int compare(Employee ex1, Employee ex2) {
+        return Double.compare(ex1.getSalary(), ex2.getSalary());
+    }
 }
